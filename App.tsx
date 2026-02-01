@@ -9,6 +9,7 @@ import { HinaBrowser } from './components/browser/HinaBrowser';
 import { CallingSystem } from './components/CallingSystem';
 import { useAudioHandler } from './hooks/useAudioHandler';
 import { db, onSnapshot, collection, addDoc } from './firebase';
+import { Analytics } from "@vercel/analytics/react";
 
 export interface User { id: string; name: string; role: 'admin' | 'friend' | 'family'; online?: boolean; location?: { lat: number; lng: number }; faceData?: string; }
 
@@ -238,6 +239,7 @@ const App: React.FC = () => {
           )}
         </>
       )}
+      <Analytics />
     </div>
   );
 };
