@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { GoogleGenAI, Modality, LiveServerMessage, Type, FunctionDeclaration } from '@google/genai';
-import { SpeedInsights } from '@vercel/speed-insights/react';
 import { HinaUI } from './components/HinaUI';
 import { MediaLibrary, Folder, LocalMedia } from './components/vault/MediaLibrary';
 import { Login } from './components/Login';
@@ -239,7 +238,6 @@ const App: React.FC = () => {
           )}
         </>
       )}
-      <SpeedInsights />
     </div>
   );
 };
